@@ -1,10 +1,17 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>CalorieSnap</Text>
       <Text style={styles.subtitle}>Estimate calories from a food photo.</Text>
+
+      <Text style={styles.label}>Where did you get this food?</Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Mcdonald's, Chipotle, Homemade..."
+      />
 
       <Pressable
         style={styles.button}
@@ -47,5 +54,19 @@ const styles = StyleSheet.create({
     color: "#ffffff",
     fontSize: 18,
     fontWeight: "600",
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 8,
+  },
+
+  input: {
+    width: "100%",
+    maxWidth: 300,
+    borderWidth: 1,
+    borderColor: "#cccccc",
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 24,
   },
 });
