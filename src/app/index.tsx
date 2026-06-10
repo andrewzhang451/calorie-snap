@@ -6,7 +6,12 @@ export default function HomeScreen() {
       <Text style={styles.title}>CalorieSnap</Text>
       <Text style={styles.subtitle}>Estimate calories from a food photo.</Text>
 
-      <Pressable style={styles.button}>
+      <Pressable
+        style={styles.button}
+        onPress={() => {
+          alert("Take Food button pressed?");
+        }}
+      >
         <Text style={styles.buttonText}>📷 Take Food Photo</Text>
       </Pressable>
     </View>
