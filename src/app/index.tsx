@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function HomeScreen() {
+  const [restaurant, setRestaurant] = useState("");
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>CalorieSnap</Text>
@@ -11,12 +14,14 @@ export default function HomeScreen() {
       <TextInput
         style={styles.input}
         placeholder="Mcdonald's, Chipotle, Homemade..."
+        value={restaurant}
+        onChangeText={setRestaurant}
       />
 
       <Pressable
         style={styles.button}
         onPress={() => {
-          alert("Take Food button pressed?");
+          alert(`Take Food button pressed!\nRestaurant: ${restaurant}`);
         }}
       >
         <Text style={styles.buttonText}>📷 Take Food Photo</Text>
