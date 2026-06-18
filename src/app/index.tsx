@@ -11,6 +11,10 @@ export default function HomeScreen() {
 
       <Text style={styles.label}>Where did you get this food?</Text>
 
+      <Text style={styles.currentRestaurant}>
+        Current restaurant: {restaurant}
+      </Text>
+
       <TextInput
         style={styles.input}
         placeholder="Mcdonald's, Chipotle, Homemade..."
@@ -31,6 +35,11 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  currentRestaurant: {
+    fontSize: 16,
+    marginBottom: 16,
+    color: "#555555",
+  },
   container: {
     flex: 1,
     alignItems: "center",
