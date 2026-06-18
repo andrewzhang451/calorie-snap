@@ -11,16 +11,15 @@ export default function HomeScreen() {
 
       <Text style={styles.label}>Where did you get this food?</Text>
 
-      <Text style={styles.currentRestaurant}>
-        Current restaurant: {restaurant}
-      </Text>
-
       <TextInput
         style={styles.input}
         placeholder="Mcdonald's, Chipotle, Homemade..."
         value={restaurant}
         onChangeText={setRestaurant}
       />
+      <Text style={styles.currentRestaurant}>
+        Current restaurant: {restaurant}
+      </Text>
 
       <Pressable
         style={styles.button}
