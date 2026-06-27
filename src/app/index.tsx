@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
@@ -24,7 +25,7 @@ export default function HomeScreen() {
       <Pressable
         style={styles.button}
         onPress={() => {
-          alert(`Take Food button pressed!\nRestaurant: ${restaurant}`);
+          router.push("/camera");
         }}
       >
         <Text style={styles.buttonText}>📷 Take Food Photo</Text>
